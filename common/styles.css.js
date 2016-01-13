@@ -5,20 +5,12 @@ module.exports = function* () {
   var green1 = '#a6e22e'
   var green2 = '#8EBB32'
   var green2Dark = '#76923B'
+
+  // base styles
   yield `
   body {
     display: flex;
     color: #555;
-  }
-  body:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background: ${black1};
-    z-index: -1;
   }
   h1, h2, h3, h4, h5 {
     font-weight: 300;
@@ -26,9 +18,8 @@ module.exports = function* () {
   }
   h1 {
     font-size: 3em;
-    font-weight: normal;
     margin: 0px 0 30px 0;
-    color: ${green1};
+    border-bottom: 1px solid gray;
   }
   h2 {
     font-size: 2.25em;
@@ -48,26 +39,57 @@ module.exports = function* () {
     font-size: 18px;
     font-weight: 300;
   }
+  `
+
+  // left nav
+  yield `
   #leftnav {
-    flex: 0 0 200px;
-    padding: 90px 20px;
+    flex: 0 0 220px;
+    background: #eee;
+    border-right: 3px solid #eaeaea;    
+    padding: 0px 20px 20px;
   }
   .leftnav-item {  
-    margin-bottom: 12px;
-    padding-top: 12px;
+    position: relative;
+    margin-bottom: 15px;
+    padding-top: 15px;
     font-size: 21px;
     font-weight: 300;
+    border-top: 1px solid #ccc;
+  }
+  .leftnav-item:first-child {
+    border: 0;
+  }
+  .leftnav-subitems {
+    margin-bottom: 15px;
   }
   .leftnav-subitems .leftnav-item {
-    margin-left: 18px;
-    font-size: 18px;
+    margin: 0 0 5px 15px;
+    font-size: 15px;
+    font-weight: normal;
     padding: 0;
+    border: 0;
+  }
+  .leftnav-subitems .leftnav-item:before {
+    content: '\\25B8';
+    position: absolute;
+    left: -12px;
+    font-size: 12px;
+  }
+  .leftnav-indent {
+    padding-left: 15px;
   }
   .leftnav-item a {
-    color: #555;
+    color: #333;
     text-decoration: none;
   }
   .leftnav-item a:hover {
+    color: #000;
+  }
+  .leftnav-subitems .leftnav-item a {
+    color: #777;
+  }
+  .leftnav-subitems .leftnav-item a:hover {
     color: #000;
   }
   .leftnav-item.selected a {
@@ -76,6 +98,14 @@ module.exports = function* () {
   .leftnav-item.selected a:hover {
     color: ${green2Dark};
   }
+  .leftnav-item small {
+    font-size: 13px;
+    color: gray;
+  }
+  `
+
+  // content
+  yield `
   #content {
     flex: 1;
     padding: 6px 20px;
