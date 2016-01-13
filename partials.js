@@ -29,7 +29,7 @@ module.exports.leftnav = function (opts) {
       ${item('/docs/sbot/tutorial.html', 'Tutorial')}
       ${item('/docs/sbot/howto-setup-pub.html', 'HOWTO: Setup a Pub')}
     </div>
-    ${item('/secure-scuttlebutt', 'Secure Scuttlebutt', 'Database Protocol Lib')}
+    ${item('/secure-scuttlebutt', 'Secure Scuttlebutt', 'Database Protocol')}
     <div class="leftnav-subitems">
       ${item('/docs/ssb/learn.html', 'Learn about the Protocol')}
       ${item('/docs/secret-handshake.html', 'Secret Handshake')}
@@ -50,17 +50,18 @@ module.exports.leftnav = function (opts) {
       ${item('/docs/api/ssb-msg-schemas.html', 'ssb-msg-schemas')}
       ${item('/docs/api/ssb-ref.html', 'ssb-ref')}
       ${item('/docs/api/ssb-keys.html', 'ssb-keys')}
+      ${item('/docs/api/ssb-config.html', 'ssb-config')}
       ${item('/docs/api/secret-stack.html', 'secret-stack')}
       ${item('/docs/api/muxrpc.html', 'muxrpc')}
-      ${item('/docs/api/pull-streams.html', 'pull-streams')}
+      ${item('/docs/api/pull-stream.html', 'pull-stream')}
     </div>
     ${item('/docs/articles/index.html', 'Articles')}
     <div class="leftnav-subitems">
-      ${item('/docs/articles/using-reputation-systems-to-create-shared-function-critical-datastructures-in-open-networks.md', 'Design Challenge: Avoiding Centralization and Singletons')}
-      ${item('/docs/articles/secure-private-channels.md', 'Design Challenge: Sybil Attacks')}
-      ${item('/docs/articles/desirable-properties-for-a-secure-channel.md', 'Desirable Properties for a Secure Channel')}
-      ${item('/docs/articles/design-challenge-sybil-attack.md', 'Secure, Private Channels: the Good, the Bad, and the Ugly')}
-      ${item('/docs/articles/design-challenge-avoid-centralization-and-singletons.md', 'Using Reputation in Open Networks')}
+      ${item('/docs/articles/using-reputation-systems-to-create-shared-function-critical-datastructures-in-open-networks.html', 'Design Challenge: Avoiding Centralization and Singletons')}
+      ${item('/docs/articles/secure-private-channels.html', 'Design Challenge: Sybil Attacks')}
+      ${item('/docs/articles/desirable-properties-for-a-secure-channel.html', 'Desirable Properties for a Secure Channel')}
+      ${item('/docs/articles/design-challenge-sybil-attack.html', 'Secure, Private Channels: the Good, the Bad, and the Ugly')}
+      ${item('/docs/articles/design-challenge-avoid-centralization-and-singletons.html', 'Using Reputation in Open Networks')}
     </div>
   </div>`
 }
