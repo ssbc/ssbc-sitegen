@@ -8,19 +8,24 @@ var pathlib = require('path')
 module.exports.buildRepo = function (repo) {
   console.log('Building', repo.id, '...')
 
-  function buildFile (rootpath) {
+  function buildFile (rootpath, subdir) {
+    subdir = subdir || ''
     return function (file) {
       if (file.match(/\.js$/) !== null) {
         var name = file.replace('.js', '')
-        var outpath = pathlib.join(process.cwd(), name)
+        var outpath = pathlib.join(process.cwd(), subdir + name)
         module.exports.build(outpath, require(rootpath+name))
       }
-      if (file.match(/\.txt$/) !== null) {
+      else if (file.match(/\.txt$/) !== null) {
         var name = file.replace('.txt', '')
         var inpath = pathlib.join(__dirname, rootpath, file)
         var outpath = pathlib.join(process.cwd(), name)
         console.log('== Copying', inpath, 'to', outpath,'==')
         fs.writeFileSync(outpath, fs.readFileSync(inpath, 'utf-8'))
+      }
+      else {
+        var newrootpath = pathlib.join(rootpath, file)
+        fs.readdirSync(pathlib.join(__dirname, newrootpath)).forEach(buildFile('./'+newrootpath+'/', file+'/'))
       }
     }
   }
