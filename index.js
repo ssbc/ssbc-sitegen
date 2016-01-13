@@ -3,8 +3,11 @@ var argv = require('yargs').argv
 var gen = require('./gen')
 
 const REPOS = {
+  home: { id: 'home' },
+  patchwork: { id: 'patchwork' },
+  'secure-scuttlebutt': { id: 'secure-scuttlebutt' },
+  scuttlebot: { id: 'scuttlebot' },
   docs: { id: 'docs' },
-  'secure-scuttlebutt': { id: 'secure-scuttlebutt' }
 }
 
 const argvRepo = argv._[0]

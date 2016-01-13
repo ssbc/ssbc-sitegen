@@ -1,7 +1,7 @@
 {
   "name": "ssbc-sitegen",
   "version": "1.0.0",
-  "description": "secure scuttlebutt consortium site generator",
+  "description": "A tool to generate the GH pages for ssbc repos.",
   "scripts": {},
   "repository": {
     "type": "git",
