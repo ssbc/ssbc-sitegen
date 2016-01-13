@@ -1,0 +1,15 @@
+{
+  "name": "ssbc-sitegen",
+  "version": "1.0.0",
+  "description": "secure scuttlebutt consortium site generator",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssbc/docs.git"
+  },
+  "homepage": "https://github.com/ssbc/docs#readme",
+  "dependencies": {
+    "marked": "^0.3.5",
+    "yargs": "^3.31.0"
+  }
+}
