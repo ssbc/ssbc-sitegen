@@ -1,8 +1,24 @@
 module.exports = function* () {
+  var blue1 = '#0091FF'
+  var blue1Dark = '#0051AA'
+  var black1 = '#272822'
+  var green1 = '#a6e22e'
+  var green2 = '#8EBB32'
+  var green2Dark = '#76923B'
   yield `
   body {
     display: flex;
     color: #555;
+  }
+  body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: ${black1};
+    z-index: -1;
   }
   h1, h2, h3, h4, h5 {
     font-weight: 300;
@@ -10,7 +26,9 @@ module.exports = function* () {
   }
   h1 {
     font-size: 3em;
-    margin-top: 5px;
+    font-weight: normal;
+    margin: 0px 0 30px 0;
+    color: ${green1};
   }
   h2 {
     font-size: 2.25em;
@@ -25,9 +43,14 @@ module.exports = function* () {
   h5 {
     font-size: 1em;
   }
+  p, ul, ol {
+    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+  }
   #leftnav {
     flex: 0 0 200px;
-    padding: 10px 20px;
+    padding: 90px 20px;
   }
   .leftnav-item {  
     margin-bottom: 12px;
@@ -48,14 +71,14 @@ module.exports = function* () {
     color: #000;
   }
   .leftnav-item.selected a {
-    color: #0091FF;
+    color: ${green2};
   }
   .leftnav-item.selected a:hover {
-    color: #0051AA;
+    color: ${green2Dark};
   }
   #content {
     flex: 1;
-    padding: 10px 20px;
+    padding: 6px 20px;
   }
   `
 }

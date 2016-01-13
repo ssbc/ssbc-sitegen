@@ -3,6 +3,9 @@ module.exports.head = function (opts) {
     <title>${opts.title}</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="monokai.css">
+    <script src="highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>`
 }
 
@@ -15,7 +18,6 @@ module.exports.leftnav = function (opts) {
   }
 
   return `<div id="leftnav">
-    ${item('/', 'Home')}
     ${item('/patchwork', 'Patchwork')}
     ${item('/secure-scuttlebutt', 'Secure Scuttlebutt')}
     <div class="leftnav-subitems">
