@@ -8,23 +8,28 @@ var pathlib = require('path')
 module.exports.buildRepo = function (repo) {
   console.log('Building', repo.id, '...')
 
-  // repo assets
-  fs.readdirSync(pathlib.join(__dirname, 'repos', repo.id)).forEach(function(file) {
-    if (file.match(/\.js$/) !== null) {
-      var name = file.replace('.js', '')
-      var outpath = pathlib.join(process.cwd(), name)
-      module.exports.build(outpath, require('./repos/'+repo.id+'/'+name))
+  function buildFile (rootpath) {
+    return function (file) {
+      if (file.match(/\.js$/) !== null) {
+        var name = file.replace('.js', '')
+        var outpath = pathlib.join(process.cwd(), name)
+        module.exports.build(outpath, require(rootpath+name))
+      }
+      if (file.match(/\.txt$/) !== null) {
+        var name = file.replace('.txt', '')
+        var inpath = pathlib.join(__dirname, rootpath, file)
+        var outpath = pathlib.join(process.cwd(), name)
+        console.log('== Copying', inpath, 'to', outpath,'==')
+        fs.writeFileSync(outpath, fs.readFileSync(inpath, 'utf-8'))
+      }
     }
-  })
+  }
+
+  // repo assets
+  fs.readdirSync(pathlib.join(__dirname, 'repos', repo.id)).forEach(buildFile('./repos/'+repo.id+'/'))
 
   // common assets
-  fs.readdirSync(pathlib.join(__dirname, 'common')).forEach(function(file) {
-    if (file.match(/\.js$/) !== null) {
-      var name = file.replace('.js', '')
-      var outpath = pathlib.join(process.cwd(), name)
-      module.exports.build(outpath, require('./common/'+name))
-    }
-  })
+  fs.readdirSync(pathlib.join(__dirname, 'common')).forEach(buildFile('./common/'))
 }
 
 // write a text file to `path` with the given `template`

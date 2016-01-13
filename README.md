@@ -14,6 +14,7 @@ Example:
 
 ```
 cd ~/patchwork
+git checkout gh-pages
 ~/ssbc-sitegen/index.js patchwork
 ```
 
@@ -22,8 +23,8 @@ cd ~/patchwork
 Each repo has a folder under `./repos`, plus an entry in the `REPOS` constant in `./index.js`.
 The JS files in the repo folder are templates.
 
-The build-tool will iterate all JS files under `./repo/<repo>/*` and write the output to cwd.
-The output-file is the JS file, minus the `.js` extension.
+The build-tool will iterate all .JS and .TXT files under `./repo/<repo>/*` and write the output to cwd.
+The output-file is the file, minus the `.js` or `.txt` extension.
 Therefore, `index.html.js` will output `index.html`.
 
 The build-tool also iterates and outputs all JS files under `./common`.
@@ -36,3 +37,5 @@ The build-tool also iterates and outputs all JS files under `./common`.
 The JS files are template files.
 They should export a generator which yields the output.
 They are passed the object that's exported by `./gen.js`, which gives them access to build utilities and partials.
+
+The TXT files are copied without changes.
