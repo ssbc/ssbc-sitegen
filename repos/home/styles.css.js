@@ -42,7 +42,8 @@ module.exports = function* () {
   code {
     background: #eee;
     border-radius: 2px;
-    padding: 0 2px;
+    padding: 1px 3px;
+    font-size: 16px;
   }
   pre code {
     display: block;

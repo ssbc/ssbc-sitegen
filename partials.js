@@ -25,9 +25,9 @@ module.exports.leftnav = function (opts) {
     </div>
     ${item('/scuttlebot', 'Scuttlebot', 'P2P Database')}
     <div class="leftnav-subitems">
-      ${item('/docs/sbot/quickstart.html', 'Quickstart')}
+      ${item('/docs/sbot/install.html', 'Install')}
       ${item('/docs/sbot/tutorial.html', 'Tutorial')}
-      ${item('/docs/sbot/howto-setup-pub.html', 'HOWTO: Setup a Pub')}
+      ${item('/docs/sbot/howto-setup-a-pub.html', 'HOWTO: Setup a Pub')}
     </div>
     ${item('/secure-scuttlebutt', 'Secure Scuttlebutt', 'Database Protocol')}
     <div class="leftnav-subitems">
