@@ -32,8 +32,8 @@ module.exports.leftnav = function (opts) {
     ${item('/secure-scuttlebutt', 'Secure Scuttlebutt', 'Database Protocol')}
     <div class="leftnav-subitems">
       ${item('/docs/ssb/learn.html', 'Learn about the Protocol')}
-      ${item('/docs/secret-handshake.html', 'Secret Handshake')}
-      ${item('/docs/private-box.html', 'End-to-end Encryption')}
+      ${item('/docs/ssb/secret-handshake.html', 'Secret Handshake')}
+      ${item('/docs/ssb/end-to-end-encryption.html', 'End-to-end Encryption')}
     </div>
     ${item('/docs/api/index.html', 'API Documentation')}
     <div class="leftnav-subitems">

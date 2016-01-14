@@ -39,6 +39,17 @@ module.exports = function* () {
     font-size: 18px;
     font-weight: 300;
   }
+  code {
+    background: #eee;
+    border-radius: 2px;
+    padding: 0 2px;
+  }
+  pre code {
+    display: block;
+    padding: 0.5em;
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
   `
 
   // left nav
