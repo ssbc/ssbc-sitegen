@@ -57,11 +57,11 @@ module.exports.leftnav = function (opts) {
     </div>
     ${item('/docs/articles/index.html', 'Articles')}
     <div class="leftnav-subitems">
-      ${item('/docs/articles/using-reputation-systems-to-create-shared-function-critical-datastructures-in-open-networks.html', 'Design Challenge: Avoiding Centralization and Singletons')}
-      ${item('/docs/articles/secure-private-channels.html', 'Design Challenge: Sybil Attacks')}
+      ${item('/docs/articles/design-challenge-avoid-centralization-and-singletons.html', 'Design Challenge: Avoiding Centralization and Singletons')}
+      ${item('/docs/articles/design-challenge-sybil-attack.html', 'Design Challenge: Sybil Attacks')}
       ${item('/docs/articles/desirable-properties-for-a-secure-channel.html', 'Desirable Properties for a Secure Channel')}
-      ${item('/docs/articles/design-challenge-sybil-attack.html', 'Secure, Private Channels: the Good, the Bad, and the Ugly')}
-      ${item('/docs/articles/design-challenge-avoid-centralization-and-singletons.html', 'Using Reputation in Open Networks')}
+      ${item('/docs/articles/secure-private-channels.html', 'Secure, Private Channels: the Good, the Bad, and the Ugly')}
+      ${item('/docs/articles/using-reputation-in-open-networks.html', 'Using Reputation in Open Networks')}
     </div>
   </div>`
 }
