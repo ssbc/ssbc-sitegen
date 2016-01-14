@@ -5,6 +5,7 @@ module.exports = function* () {
   var green1 = '#a6e22e'
   var green2 = '#8EBB32'
   var green2Dark = '#76923B'
+  var maxWidth = 740
 
   // base styles
   yield `
@@ -19,7 +20,6 @@ module.exports = function* () {
   h1 {
     font-size: 3em;
     margin: 0px 0 30px 0;
-    border-bottom: 1px solid gray;
   }
   h2 {
     font-size: 2.25em;
@@ -33,6 +33,17 @@ module.exports = function* () {
   }
   h5 {
     font-size: 1em;
+  }
+  hr {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 2em 0;
+  }
+  blockquote {
+    color: gray;
+    border-left: 8px solid #ccc;
+    padding-left: 1em;
+    margin: 2em;
   }
   p, ul, ol {
     font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
@@ -121,6 +132,7 @@ module.exports = function* () {
   #content {
     flex: 1;
     padding: 6px 20px;
+    max-width: ${maxWidth}px;
   }
   `
 }
