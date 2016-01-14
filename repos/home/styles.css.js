@@ -5,13 +5,22 @@ module.exports = function* () {
   var green1 = '#a6e22e'
   var green2 = '#8EBB32'
   var green2Dark = '#76923B'
-  var maxWidth = 740
+
+  var leftnavWidth = 220
+  var contentWidth = 740
 
   // base styles
   yield `
   body {
     display: flex;
     color: #555;
+  }
+  body:before, body:after {
+    content: '';
+    flex: 1;
+  }
+  body:before {
+    background: #eee;
   }
   h1, h2, h3, h4, h5 {
     font-weight: 300;
@@ -67,7 +76,7 @@ module.exports = function* () {
   // left nav
   yield `
   #leftnav {
-    flex: 0 0 220px;
+    flex: 0 0 ${leftnavWidth}px;
     background: #eee;
     border-right: 3px solid #eaeaea;    
     padding: 0px 20px 20px;
@@ -130,9 +139,8 @@ module.exports = function* () {
   // content
   yield `
   #content {
-    flex: 1;
+    flex: 0 0 ${contentWidth}px;
     padding: 6px 20px;
-    max-width: ${maxWidth}px;
   }
   `
 }
