@@ -61,7 +61,7 @@ module.exports.leftnav = function (opts) {
       ${item('/docs/articles/design-challenge-sybil-attack.html', 'Design Challenge: Sybil Attacks')}
       ${item('/docs/articles/desirable-properties-for-a-secure-channel.html', 'Desirable Properties for a Secure Channel')}
       ${item('/docs/articles/secure-private-channels.html', 'Secure, Private Channels: the Good, the Bad, and the Ugly')}
-      ${item('/docs/articles/using-reputation-in-open-networks.html', 'Using Reputation in Open Networks')}
+      ${item('/docs/articles/using-trust-in-open-networks.html', 'Using Trust in Open Networks')}
     </div>
   </div>`
 }
