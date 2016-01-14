@@ -35,7 +35,7 @@ module.exports.leftnav = function (opts) {
       ${item('/docs/ssb/secret-handshake.html', 'Secret Handshake')}
       ${item('/docs/ssb/end-to-end-encryption.html', 'End-to-end Encryption')}
     </div>
-    ${item('/docs/api/index.html', 'API Documentation')}
+    <div class="leftnav-item">API Documentation</div>
     <div class="leftnav-subitems">
       ${item('/docs/api/scuttlebot.html', 'scuttlebot')}
       <div class="leftnav-indent">
@@ -55,7 +55,7 @@ module.exports.leftnav = function (opts) {
       ${item('/docs/api/muxrpc.html', 'muxrpc')}
       ${item('/docs/api/pull-stream.html', 'pull-stream')}
     </div>
-    ${item('/docs/articles/index.html', 'Articles')}
+    <div class="leftnav-item">Articles</div>
     <div class="leftnav-subitems">
       ${item('/docs/articles/design-challenge-avoid-centralization-and-singletons.html', 'Design Challenge: Avoiding Centralization and Singletons')}
       ${item('/docs/articles/design-challenge-sybil-attack.html', 'Design Challenge: Sybil Attacks')}
