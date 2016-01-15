@@ -65,7 +65,23 @@ module.exports.leftnav = function (opts) {
       <div class="leftnav-subitems">
         ${item('/docs/scuttlebot/install.html', 'Install')}
         ${item('/docs/scuttlebot/tutorial.html', 'Tutorial')}
-        ${item('/docs/scuttlebot/howto-setup-a-pub.html', 'HOWTO: Setup a Pub')}
+        ${item('/docs/scuttlebot/cli-reference.html', 'CLI Reference')}
+        ${item('/docs/api/scuttlebot.html', 'API Reference')}
+      </div>
+      <div class="leftnav-item">Howto Guides</div>
+      <div class="leftnav-subitems">
+        ${item('/docs/scuttlebot/howto-setup-a-pub.html', 'Setup a Pub')}
+        ${item('/docs/scuttlebot/howto-create-a-js-client.html', 'Create a JS Client')}
+        ${item('/docs/scuttlebot/howto-get-your-id.html', 'Get your ID')}
+        ${item('/docs/scuttlebot/howto-get-your-address.html', 'Get your Address')}
+        ${item('/docs/scuttlebot/howto-publish-a-post.html', 'Publish a Post')}
+        ${item('/docs/scuttlebot/howto-publish-a-file.html', 'Publish a File')}
+        ${item('/docs/scuttlebot/howto-publish-encrypted-messages.html', 'Publish Encrypted Messages')}
+        ${item('/docs/scuttlebot/howto-follow-unfollow.html', 'Follow/Unfollow')}
+        ${item('/docs/scuttlebot/howto-announce-a-pub-server.html', 'Announce a Pub Server')}
+        ${item('/docs/scuttlebot/howto-create-an-invite.html', 'Create an Invite')}
+        ${item('/docs/scuttlebot/howto-use-an-invite.html', 'Use an Invite')}
+        ${item('/docs/scuttlebot/howto-update-your-profile.html', 'Update your Profile')}
       </div>
     </div>`
   }
