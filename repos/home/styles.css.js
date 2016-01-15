@@ -12,7 +12,7 @@ module.exports = function* () {
     '#0057B8',
     '#F11E4A',
     '#F8A527',
-    '#266D7F',
+    '#8ebb32',
     '#82A',
     '#0057B8'
   ]
@@ -98,7 +98,7 @@ module.exports = function* () {
   }
   #topnav-inner {
     display: flex;
-    width: 1000px;
+    width: 1050px;
     margin: 0 auto;    
   }
   #topnav:before, #topnav:after {
@@ -106,7 +106,7 @@ module.exports = function* () {
     flex: 1;
   }
   .topnav-item {  
-    padding: 18px 1em;
+    padding: 18px 1.3em;
     font-size: 21px;
     font-weight: 300;
     text-decoration: none;
@@ -178,10 +178,8 @@ module.exports = function* () {
     color: #000;
   }
   .leftnav-item.selected a {
-    color: ${green2};
-  }
-  .leftnav-item.selected a:hover {
-    color: ${green2Dark};
+    font-weight: normal;
+    color: #333;
   }
   .leftnav-item small {
     font-size: 13px;
