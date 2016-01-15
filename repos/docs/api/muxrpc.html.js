@@ -1,11 +1,8 @@
 module.exports = function* (gen) {
-  yield `<html>
-    ${ gen.partials.head({ title: 'MuxRPC - Documentation - SSBC' }) }
-    <body>
-      ${ gen.partials.leftnav({ current: '/docs/api/muxrpc.html' }) }
-      <div id="content">
-        ${ gen.readMD('api/muxrpc.md') }
-      </div>
-    </body>
-  </html>`
+  yield gen.partials.page({
+    title: 'MuxRPC - Documentation - SSBC',
+    section: '/docs',
+    path: '/docs/api/muxrpc.html',
+    content: gen.readMD('api/muxrpc.md')
+  })
 }
