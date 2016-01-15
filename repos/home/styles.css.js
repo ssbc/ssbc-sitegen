@@ -1,3 +1,17 @@
+var displayFlex =
+   `display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex`
+
+function flex(grow, vals) {
+  vals = vals ? ' ' + vals : ''
+  return `-webkit-box-flex: ${grow};
+    -webkit-flex: ${grow}${vals};
+        -ms-flex: ${grow}${vals};
+            flex: ${grow}${vals}`
+}
+
 module.exports = function* () {
   var blue1 = '#0091FF'
   var blue1Dark = '#0051AA'
@@ -79,11 +93,11 @@ module.exports = function* () {
   // layout
   yield `
   #layout {
-    display: flex;
+    ${displayFlex};
   }
   #layout:before, #layout:after {
     content: '';
-    flex: 1;
+    ${flex(1)};
   }
   `
 
@@ -97,13 +111,13 @@ module.exports = function* () {
     text-transform: lowercase;
   }
   #topnav-inner {
-    display: flex;
+    ${displayFlex};
     width: 1050px;
     margin: 0 auto;    
   }
   #topnav:before, #topnav:after {
     content: '';
-    flex: 1;
+    ${flex(1)};
   }
   .topnav-item {  
     padding: 18px 1.3em;
@@ -131,7 +145,7 @@ module.exports = function* () {
   // left nav
   yield `
   #leftnav {
-    flex: 0 0 ${leftnavWidth}px;
+    ${flex(0, `0 ${leftnavWidth}px`)};
     padding: 0px 20px 20px;
   }
   .leftnav-item {  
@@ -190,7 +204,7 @@ module.exports = function* () {
   // content
   yield `
   #content {
-    flex: 0 0 ${contentWidth}px;
+    ${flex(0, `0 ${contentWidth}px`)};
     padding: 6px 20px;
   }
   `
