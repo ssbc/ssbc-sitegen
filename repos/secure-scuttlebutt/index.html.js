@@ -1,8 +1,8 @@
 module.exports = function* (gen) {
   yield gen.partials.page({
     title: 'Secure Scuttlebutt - SSBC',
-    section: '/docs',
+    section: '/scuttlebot',
     path: '/secure-scuttlebutt',
-    content: gen.readMD('README.md')
+    content: gen.readMD('index.md')
   })
 }

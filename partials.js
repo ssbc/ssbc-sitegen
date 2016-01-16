@@ -35,9 +35,9 @@ module.exports.topnav = function (opts) {
   return `<div id="topnav">
     <div id="topnav-inner">
       ${item('/', 'Home', 'SSBC')}
-      ${item('/patchwork', 'Patchwork', 'Messaging App')}
-      ${item('/scuttlebot', 'Scuttlebot', 'P2P Database')}
-      ${item('/docs', 'Documentation', 'APIs, Tutorials, Whitepapers')}
+      ${item('/patchwork', 'Patchwork', 'Social App')}
+      ${item('/scuttlebot', 'Scuttlebot', 'P2P Log Store')}
+      ${item('/docs', 'Documentation', 'APIs, Articles')}
     </div>
   </div>`
 }
@@ -65,8 +65,15 @@ module.exports.leftnav = function (opts) {
       <div class="leftnav-subitems">
         ${item('/docs/scuttlebot/install.html', 'Install')}
         ${item('/docs/scuttlebot/tutorial.html', 'Tutorial')}
-        ${item('/docs/scuttlebot/cli-reference.html', 'CLI Reference')}
-        ${item('/docs/api/scuttlebot.html', 'API Reference')}
+        ${item('/docs/api/scuttlebot.html', 'API / CLI Reference')}
+      </div>
+      <div class="leftnav-item">Key Concepts</div>
+      <div class="leftnav-subitems">
+        ${item('/secure-scuttlebutt', 'Secure Scuttlebutt: a global database protocol')}
+        ${item('/docs/ssb/linking.html', 'Content-Hash Linking')}
+        ${item('/docs/ssb/secret-handshake.html', 'Secret Handshake: a secure channel protocol')}
+        ${item('/docs/ssb/end-to-end-encryption.html', 'Private Box: metadata-free encryption')}
+        ${item('/docs/ssb/faq.html', 'Frequently Asked Questions')}
       </div>
       <div class="leftnav-item">Howto Guides</div>
       <div class="leftnav-subitems">
@@ -87,12 +94,6 @@ module.exports.leftnav = function (opts) {
   }
   if (opts.section === '/docs') {
     return `<div id="leftnav">
-      ${item('/secure-scuttlebutt', 'Secure Scuttlebutt', 'Database Protocol')}
-      <div class="leftnav-subitems">
-        ${item('/docs/ssb/learn.html', 'Learn about the Protocol')}
-        ${item('/docs/ssb/secret-handshake.html', 'Secret Handshake')}
-        ${item('/docs/ssb/end-to-end-encryption.html', 'End-to-end Encryption')}
-      </div>
       <div class="leftnav-item">API Documentation</div>
       <div class="leftnav-subitems">
         ${item('/docs/api/scuttlebot.html', 'scuttlebot')}
