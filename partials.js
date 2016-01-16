@@ -18,7 +18,7 @@ module.exports.head = function (opts) {
     <title>${opts.title}</title>
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/monokai.css">
+    <link rel="stylesheet" href="/atelier-forest-light.css">
     <script src="/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </head>`
