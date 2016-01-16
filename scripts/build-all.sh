@@ -31,6 +31,41 @@ cd ~/ssb-docs
 git checkout gh-pages
 ~/ssbc-sitegen/index.js docs
 
+echo "Building SSB-Ref"
+cd ~/ssb-ref
+git checkout gh-pages
+~/ssbc-sitegen/index.js ssb-ref
+
+echo "Building SSB-Keys"
+cd ~/ssb-keys
+git checkout gh-pages
+~/ssbc-sitegen/index.js ssb-keys
+
+echo "Building SSB-Config"
+cd ~/ssb-config
+git checkout gh-pages
+~/ssbc-sitegen/index.js ssb-config
+
+echo "Building Secret Stack"
+cd ~/secret-stack
+git checkout gh-pages
+~/ssbc-sitegen/index.js secret-stack
+
+echo "Building Muxrpc"
+cd ~/muxrpc
+git checkout gh-pages
+~/ssbc-sitegen/index.js muxrpc
+
+echo "Building SSB-Msg-Schemas"
+cd ~/ssb-msg-schemas
+git checkout gh-pages
+~/ssbc-sitegen/index.js ssb-msg-schemas
+
+echo "Building SSB-Msgs"
+cd ~/ssb-msgs
+git checkout gh-pages
+~/ssbc-sitegen/index.js ssb-msgs
+
 echo "Building Blessed Dashboard"
 cd ~/ssb-blessed-dashboard
 git checkout gh-pages

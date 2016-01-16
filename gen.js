@@ -42,12 +42,19 @@ module.exports.buildRepo = function (repo) {
 // - `template` generator: yields strings which will be concatted to make the file
 module.exports.build = function (path, template) {
   console.log('== Generating', path, '==')
+  var content = module.exports.tmpl(template)
+  fs.writeFileSync(path, content, 'utf-8')
+  console.log('Done.')
+}
+
+// run a generator to produce an output
+// - `template` generator: yields strings which will be concatted to make the file
+module.exports.tmpl = function (template) {
   var content = ''
   for (var part of template(module.exports)) {
     content += part
   }
-  fs.writeFileSync(path, content, 'utf-8')
-  console.log('Done.')
+  return content
 }
 
 // read a text file

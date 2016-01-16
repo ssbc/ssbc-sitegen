@@ -35,7 +35,7 @@ module.exports.topnav = function (opts) {
   return `<div id="topnav">
     <div id="topnav-inner">
       ${item('/', 'Home', 'SSBC')}
-      ${item('/patchwork', 'Patchwork', 'Social App')}
+      ${item('/patchwork', 'Patchwork', 'Social Messaging App')}
       ${item('/scuttlebot', 'Scuttlebot', 'P2P Log Store')}
       ${item('/docs', 'Documentation', 'APIs, Articles')}
     </div>
@@ -65,21 +65,13 @@ module.exports.leftnav = function (opts) {
       <div class="leftnav-subitems">
         ${item('/docs/scuttlebot/install.html', 'Install')}
         ${item('/docs/scuttlebot/tutorial.html', 'Tutorial')}
-        ${item('/docs/api/scuttlebot.html', 'API / CLI Reference')}
+        ${item('/scuttlebot/api.html', 'API / CLI Reference')}
       </div>
       <div class="leftnav-item">Examples</div>
       <div class="leftnav-subitems">
         ${item('/ssb-blessed-dashboard', 'Blessed Dashboard')}
         ${item('/ssb-example-whois', 'Example "Whois"')}
         ${item('/ssb-example-pm', 'Private Message')}
-      </div>
-      <div class="leftnav-item">Key Concepts</div>
-      <div class="leftnav-subitems">
-        ${item('/secure-scuttlebutt', 'Secure Scuttlebutt: a global database protocol')}
-        ${item('/docs/ssb/linking.html', 'Content-Hash Linking')}
-        ${item('/docs/ssb/secret-handshake.html', 'Secret Handshake: a secure channel protocol')}
-        ${item('/docs/ssb/end-to-end-encryption.html', 'Private Box: metadata-free encryption')}
-        ${item('/docs/ssb/faq.html', 'Frequently Asked Questions')}
       </div>
       <div class="leftnav-item">Howto Guides</div>
       <div class="leftnav-subitems">
@@ -100,24 +92,33 @@ module.exports.leftnav = function (opts) {
   }
   if (opts.section === '/docs') {
     return `<div id="leftnav">
+      <div class="leftnav-item">Key Concepts</div>
+      <div class="leftnav-subitems">
+        ${item('/secure-scuttlebutt', 'Secure Scuttlebutt: a global database protocol')}
+        ${item('/docs/ssb/linking.html', 'Content-Hash Linking')}
+        ${item('/docs/ssb/secret-handshake.html', 'Secret Handshake: a secure channel protocol')}
+        ${item('/docs/ssb/end-to-end-encryption.html', 'Private Box: metadata-free encryption')}
+        ${item('/docs/ssb/faq.html', 'Frequently Asked Questions')}
+      </div>
       <div class="leftnav-item">API Documentation</div>
       <div class="leftnav-subitems">
-        ${item('/docs/api/scuttlebot.html', 'scuttlebot')}
+        ${item('/scuttlebot/api.html', 'scuttlebot')}
         <div class="leftnav-indent">
-          ${item('/docs/api/scuttlebot-blobs.html', 'blobs')}
-          ${item('/docs/api/scuttlebot-block.html', 'block')}
-          ${item('/docs/api/scuttlebot-friends.html', 'friends')}
-          ${item('/docs/api/scuttlebot-gossip.html', 'gossip')}
-          ${item('/docs/api/scuttlebot-invite.html', 'invite')}
-          ${item('/docs/api/scuttlebot-replicate.html', 'replicate')}
+          ${item('/scuttlebot/plugins/blobs.html', 'blobs')}
+          ${item('/scuttlebot/plugins/block.html', 'block')}
+          ${item('/scuttlebot/plugins/friends.html', 'friends')}
+          ${item('/scuttlebot/plugins/gossip.html', 'gossip')}
+          ${item('/scuttlebot/plugins/invite.html', 'invite')}
+          ${item('/scuttlebot/plugins/private.html', 'private')}
+          ${item('/scuttlebot/plugins/replicate.html', 'replicate')}
         </div>
-        ${item('/docs/api/ssb-msgs.html', 'ssb-msgs')}
-        ${item('/docs/api/ssb-msg-schemas.html', 'ssb-msg-schemas')}
-        ${item('/docs/api/ssb-ref.html', 'ssb-ref')}
-        ${item('/docs/api/ssb-keys.html', 'ssb-keys')}
-        ${item('/docs/api/ssb-config.html', 'ssb-config')}
-        ${item('/docs/api/secret-stack.html', 'secret-stack')}
-        ${item('/docs/api/muxrpc.html', 'muxrpc')}
+        ${item('/ssb-msgs', 'ssb-msgs')}
+        ${item('/ssb-msg-schemas', 'ssb-msg-schemas')}
+        ${item('/ssb-ref', 'ssb-ref')}
+        ${item('/ssb-keys', 'ssb-keys')}
+        ${item('/ssb-config', 'ssb-config')}
+        ${item('/secret-stack', 'secret-stack')}
+        ${item('/muxrpc', 'muxrpc')}
         ${item('/docs/api/pull-stream.html', 'pull-stream')}
       </div>
       <div class="leftnav-item">Articles</div>
