@@ -8,6 +8,9 @@ const REPOS = {
   'secure-scuttlebutt': { id: 'secure-scuttlebutt' },
   scuttlebot: { id: 'scuttlebot' },
   docs: { id: 'docs' },
+  'ssb-blessed-dashboard': { id: 'ssb-blessed-dashboard' },
+  'ssb-example-whois': { id: 'ssb-example-whois' },
+  'ssb-example-pm': { id: 'ssb-example-pm' },
 }
 
 const argvRepo = argv._[0]

@@ -67,6 +67,12 @@ module.exports.leftnav = function (opts) {
         ${item('/docs/scuttlebot/tutorial.html', 'Tutorial')}
         ${item('/docs/api/scuttlebot.html', 'API / CLI Reference')}
       </div>
+      <div class="leftnav-item">Examples</div>
+      <div class="leftnav-subitems">
+        ${item('/ssb-blessed-dashboard', 'Blessed Dashboard')}
+        ${item('/ssb-example-whois', 'Example "Whois"')}
+        ${item('/ssb-example-pm', 'Private Message')}
+      </div>
       <div class="leftnav-item">Key Concepts</div>
       <div class="leftnav-subitems">
         ${item('/secure-scuttlebutt', 'Secure Scuttlebutt: a global database protocol')}

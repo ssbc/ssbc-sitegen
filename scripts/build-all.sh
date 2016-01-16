@@ -30,3 +30,18 @@ echo "Building Docs"
 cd ~/ssb-docs
 git checkout gh-pages
 ~/ssbc-sitegen/index.js docs
+
+echo "Building Blessed Dashboard"
+cd ~/ssb-blessed-dashboard
+git checkout gh-pages
+~/ssbc-sitegen/index.js ssb-blessed-dashboard
+
+echo "Building Example Whois"
+cd ~/ssb-example-whois
+git checkout gh-pages
+~/ssbc-sitegen/index.js ssb-example-whois
+
+echo "Building Example PM"
+cd ~/ssb-example-pm
+git checkout gh-pages
+~/ssbc-sitegen/index.js ssb-example-pm
