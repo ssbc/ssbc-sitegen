@@ -22,15 +22,6 @@ module.exports = function* () {
   var green2 = '#8EBB32'
   var green2Dark = '#76923B'
 
-  var rainbowColors = [
-    '#0057B8',
-    '#F11E4A',
-    '#F8A527',
-    '#8ebb32',
-    '#82A',
-    '#0057B8'
-  ]
-
   var leftnavWidth = 220
   var contentWidth = 740
 
@@ -131,16 +122,11 @@ module.exports = function* () {
     font-size: 13px;
     color: inherit;
   }
-  `
-  for (var i=0; i < rainbowColors.length; i++) {
-    var color = rainbowColors[i]
-    yield `
-    .topnav-item:hover:nth-child(${i}),
-    .topnav-item.selected:nth-child(${i}) {
-      color: ${color};
-    }
-    `
+  .topnav-item:hover, .topnav-item.selected {
+    color: ${green2};
   }
+  `
+
 
   // left nav
   yield `
@@ -193,7 +179,7 @@ module.exports = function* () {
   }
   .leftnav-item.selected a {
     font-weight: normal;
-    color: #333;
+    color: ${green2};
   }
   .leftnav-item small {
     font-size: 13px;
