@@ -112,13 +112,19 @@ module.exports.leftnav = function (opts) {
           ${item('/scuttlebot/plugins/private.html', 'private')}
           ${item('/scuttlebot/plugins/replicate.html', 'replicate')}
         </div>
+        ${item('/ssb-client', 'ssb-client')}
+        ${item('/ssb-feed', 'ssb-feed')}
+        ${item('/ssb-keys', 'ssb-keys')}
         ${item('/ssb-msgs', 'ssb-msgs')}
         ${item('/ssb-msg-schemas', 'ssb-msg-schemas')}
         ${item('/ssb-ref', 'ssb-ref')}
-        ${item('/ssb-keys', 'ssb-keys')}
+        ${item('/ssb-markdown', 'ssb-markdown')}
+        ${item('/patchwork-threads', 'patchwork-threads')}
         ${item('/ssb-config', 'ssb-config')}
         ${item('/secret-stack', 'secret-stack')}
         ${item('/muxrpc', 'muxrpc')}
+        ${item('/muxrpcli', 'muxrpcli')}
+        ${item('/mdmanifest', 'mdmanifest')}
         ${item('/docs/api/pull-stream.html', 'pull-stream')}
       </div>
       <div class="leftnav-item">Articles</div>

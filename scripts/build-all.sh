@@ -66,6 +66,36 @@ cd ~/ssb-msgs
 git checkout gh-pages
 ~/ssbc-sitegen/index.js ssb-msgs
 
+echo "Building SSB-feed"
+cd ~/ssb-feed
+git checkout gh-pages
+~/ssbc-sitegen/index.js ssb-feed
+
+echo "Building SSB-client"
+cd ~/ssb-client
+git checkout gh-pages
+~/ssbc-sitegen/index.js ssb-client
+
+echo "Building SSB-markdown"
+cd ~/ssb-markdown
+git checkout gh-pages
+~/ssbc-sitegen/index.js ssb-markdown
+
+echo "Building muxrpcli"
+cd ~/muxrpcli
+git checkout gh-pages
+~/ssbc-sitegen/index.js muxrpcli
+
+echo "Building mdmanifest"
+cd ~/mdmanifest
+git checkout gh-pages
+~/ssbc-sitegen/index.js mdmanifest
+
+echo "Building patchwork-threads"
+cd ~/patchwork-threads
+git checkout gh-pages
+~/ssbc-sitegen/index.js patchwork-threads
+
 echo "Building Blessed Dashboard"
 cd ~/ssb-blessed-dashboard
 git checkout gh-pages
