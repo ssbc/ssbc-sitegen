@@ -11,170 +11,33 @@ function subshell() {
   bash --init-file <(echo "alias s=\"git status\";alias c=\"git commit -m\";alias co=\"git checkout\";alias a=\"git add\";alias b=\"git branch\";alias push=\"git push\";alias pull=\"git pull\";alias d=\"git diff\";alias dc=\"git diff --cached\"")
 }
 
-echo "---"
-echo "ssbc.github.io"
-cd ~/ssbc.github.io
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
+function quickcommit() {
+  echo "---"
+  echo $1
+  cd "${HOME}/${1}"
+  git checkout gh-pages
+  git status -s -b
+  subshell
+}
 
-
-echo "---"
-echo "patchwork"
-cd ~/patchwork
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "secure-scuttlebutt"
-cd ~/secure-scuttlebutt
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "scuttlebot"
-cd ~/scuttlebot
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "docs"
-cd ~/ssb-docs
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "SSB-feed"
-cd ~/ssb-feed
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "SSB-Ref"
-cd ~/ssb-ref
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "SSB-Keys"
-cd ~/ssb-keys
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "SSB-Config"
-cd ~/ssb-config
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "Secret Stack"
-cd ~/secret-stack
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "Muxrpc"
-cd ~/muxrpc
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "SSB-Msg-Schemas"
-cd ~/ssb-msg-schemas
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "SSB-Msgs"
-cd ~/ssb-msgs
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "SSB-client"
-cd ~/ssb-client
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "SSB-markdown"
-cd ~/ssb-markdown
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "patchwork-threads"
-cd ~/patchwork-threads
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "muxrpcli"
-cd ~/muxrpcli
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "mdmanifest"
-cd ~/mdmanifest
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "Blessed Dashboard"
-cd ~/ssb-blessed-dashboard
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "Example Whois"
-cd ~/ssb-example-whois
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
-
-echo "---"
-echo "Example PM"
-cd ~/ssb-example-pm
-git checkout gh-pages &>/dev/null
-git status -s -b
-subshell
-
+quickcommit ssbc.github.io
+quickcommit patchwork
+quickcommit secure-scuttlebutt
+quickcommit scuttlebot
+quickcommit ssb-docs
+quickcommit ssb-feed
+quickcommit ssb-ref
+quickcommit ssb-keys
+quickcommit ssb-config
+quickcommit secret-stack
+quickcommit muxrpc
+quickcommit ssb-msg-schemas
+quickcommit ssb-msgs
+quickcommit ssb-client
+quickcommit ssb-markdown
+quickcommit patchwork-threads
+quickcommit muxrpcli
+quickcommit mdmanifest
+quickcommit ssb-blessed-dashboard
+quickcommit ssb-example-whois
+quickcommit ssb-example-pm
