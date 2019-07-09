@@ -127,12 +127,6 @@ module.exports.leftnav = function (opts) {
         ${item('/mdmanifest', 'mdmanifest')}
         ${item('/docs/api/pull-stream.html', 'pull-stream')}
       </div>
-      <div class="leftnav-item">Articles</div>
-      <div class="leftnav-subitems">
-        ${item('/docs/articles/design-challenge-avoid-centralization-and-singletons.html', 'Design Challenge: Avoiding Centralization and Singletons')}
-        ${item('/docs/articles/design-challenge-sybil-attack.html', 'Design Challenge: Sybil Attacks')}
-        ${item('/docs/articles/using-trust-in-open-networks.html', 'Using Trust in Open Networks')}
-      </div>
     </div>`
   }
   return ''
