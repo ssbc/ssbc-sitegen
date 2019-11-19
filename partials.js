@@ -36,7 +36,7 @@ module.exports.topnav = function (opts) {
     <div id="topnav-inner">
       ${item('/', 'Home', 'SSBC')}
       ${item('/patchwork', 'Patchwork', 'Social Messaging App')}
-      ${item('/scuttlebot', 'Scuttlebot', 'P2P Log Store')}
+      ${item('/docs/scuttlebot/install.html', 'Scuttlebot', 'P2P Log Store')}
       ${item('/docs', 'Documentation', 'APIs, Articles')}
     </div>
   </div>`
